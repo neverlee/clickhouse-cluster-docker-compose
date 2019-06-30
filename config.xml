@@ -1,0 +1,36 @@
+<yandex>
+    <remote_servers>
+        <ontime_cluster>
+            <shard>
+                <weight>1</weight>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>ch-server-11</host>
+                    <port>9000</port>
+                </replica>
+                <replica>
+                    <host>ch-server-12</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+            <shard>
+                <weight>1</weight>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>ch-server-21</host>
+                    <port>9000</port>
+                </replica>
+                <replica>
+                    <host>ch-server-22</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+        </ontime_cluster>
+    </remote_servers>
+    <zookeeper>
+        <node>
+            <host>zookeeper</host>
+            <port>2181</port>
+        </node>
+    </zookeeper>
+</yandex>

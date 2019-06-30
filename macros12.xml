@@ -1,0 +1,9 @@
+<yandex>
+    <macros replace="replace">
+        <layer>01</layer>
+        <shard>01</shard>
+        <rep>12</rep>
+        <replica>ch-server-12</replica>
+        <cluster>ontime_cluster</cluster>
+    </macros>
+</yandex>

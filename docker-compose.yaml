@@ -1,0 +1,43 @@
+version: "3.2"
+services:
+  ch-server-11:
+    container_name: ch-server-11
+    hostname: ch-server-11
+    image: yandex/clickhouse-server
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.d/local.xml
+      - ./macros11.xml:/etc/clickhouse-server/config.d/macros.xml
+    ports:
+      - 9011:9000
+  ch-server-12:
+    container_name: ch-server-12
+    hostname: ch-server-12
+    image: yandex/clickhouse-server
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.d/local.xml
+      - ./macros12.xml:/etc/clickhouse-server/config.d/macros.xml
+    ports:
+      - 9012:9000
+  ch-server-21:
+    container_name: ch-server-21
+    hostname: ch-server-21
+    image: yandex/clickhouse-server
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.d/local.xml
+      - ./macros21.xml:/etc/clickhouse-server/config.d/macros.xml
+    ports:
+      - 9021:9000
+  ch-server-22:
+    container_name: ch-server-22
+    hostname: ch-server-22
+    image: yandex/clickhouse-server
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.d/local.xml
+      - ./macros22.xml:/etc/clickhouse-server/config.d/macros.xml
+    ports:
+      - 9022:9000
+  zookeeper:
+    container_name: zookeeper
+    hostname: zookeeper
+    image: zookeeper
+
